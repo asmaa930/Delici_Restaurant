@@ -1,0 +1,1028 @@
+/*? _______________________________________________________ Start_Navbar _______________________________________________________ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: transparent;
+    transform: translateY(0%);
+    transition: transform 0.5s;
+}
+
+nav.scrolled {
+    background-color: #202020;
+}
+
+nav.toTop {
+    transform: translateY(-110%);
+}
+
+nav .logo img {
+    max-width: 150px;
+}
+
+nav .links ul li a.link-item {
+    color: #fff;
+    position: relative;
+    transition-duration: 0.5s;
+}
+
+nav .links ul li a.link-item.active {
+    color: var(--main-color);
+}
+
+nav .burger-menu {
+    width: 35px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+}
+
+nav .burger-menu span {
+    width: 100%;
+    height: 1.6px;
+    background-color: #fff;
+
+    animation: lineResize 0.4s linear infinite alternate;
+}
+
+nav .burger-menu span:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+nav .burger-menu span:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+/*? _______________________________________________________ End_Navbar _______________________________________________________ */
+
+
+/* ? _______________________________________________________ Start_Header _______________________________________________________ */
+
+header .special-carousel {
+    /* fallback */
+    height: 100vh;
+    height: 100dvh;
+    position: relative;
+}
+
+header .special-carousel .special-carousel-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transform: scale(1.3);
+    
+    transition-duration: 0.5s;
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item.active {
+    z-index: 5;
+    opacity: 1;
+    transform: scale(1);
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item:nth-of-type(1) {
+    background-image: url('../images/slider-1.jpg');
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item:nth-of-type(2) {
+    background-image: url('../images/slider-2.jpg');
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item:nth-of-type(3) {
+    background-image: url('../images/slider-3.jpg');
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item .container .title,
+header .special-carousel .special-carousel-inner .special-carousel-item .container .content>* {
+    transform: translateY(60px);
+    opacity: 0;
+
+    transition: transform 1s, opacity 1s;
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item.active .container .title,
+header .special-carousel .special-carousel-inner .special-carousel-item.active .container .content>* {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item .container .title {
+    transition-delay: 0.5s;
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item .container .content h2 {
+    transition-delay: 0.8s;
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item .container .content p {
+    font-size: 20px;
+    transition-delay: 1.1s;
+}
+
+header .special-carousel .special-carousel-inner .special-carousel-item .container .content a {
+    transition-delay: 1.4s;
+}
+
+/** -------------------------------------------- */
+
+header .special-carousel .prev,
+header .special-carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 10;
+
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--main-color);
+    background: transparent;
+    color: var(--main-color);
+
+    transition-duration: 0.5s;
+}
+
+header .special-carousel .prev:hover,
+header .special-carousel .next:hover {
+    background: var(--main-color);
+    color: #000;
+}
+
+header .special-carousel .prev i,
+header .special-carousel .next i {
+    transform: rotate(-45deg);
+}
+
+header .special-carousel .prev {
+    left: 40px;
+}
+
+header .special-carousel .next {
+    right: 40px;
+}
+
+/** -------------------------------------------- */
+
+header .special-carousel .special-indicators {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    z-index: 10;
+}
+
+header .special-carousel .special-indicators li {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+}
+
+header .special-carousel .special-indicators li.active {
+    background: var(--main-color);
+}
+
+header .special-carousel.auto-play .special-indicators li.active {
+    background: #fff;
+    width: 60px;
+    border-radius: 5px;
+}
+
+header .special-carousel.auto-play .special-indicators li.active .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--main-color);
+}
+
+/** -------------------------------------------- */
+
+header .special-carousel .popup-booking-opener {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    z-index: 10;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+header .special-carousel .popup-booking-opener::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--main-color);
+    animation: rotation 10s linear infinite;
+}
+
+header .special-carousel .popup-booking-opener img {
+    max-width: 40px;
+    margin-bottom: 10px;
+}
+
+header .special-carousel .popup-booking-opener p {
+    font-size: 12px;
+    color: var(--second-color);
+    width: 75%;
+    margin: auto;
+}
+
+/*? _______________________________________________________ End_Header _______________________________________________________ */
+
+
+
+/* ? _______________________________________________________ Start_About_Us _______________________________________________________ */
+#About_Us {
+    position: relative;
+}
+
+#About_Us .bg-imgs img {
+    position: absolute;
+    animation: down-up 2s linear infinite alternate;
+}
+
+#About_Us .bg-imgs img:nth-of-type(1) {
+    top: 0;
+    right: 0;
+}
+
+#About_Us .bg-imgs img:nth-of-type(2) {
+    bottom: 0;
+    left: 0;
+}
+
+#About_Us .container {
+    position: relative;
+    z-index: 50;
+}
+
+#About_Us .container .intro {
+    width: 35%;
+    margin-bottom: 3.5rem;
+}
+
+#About_Us .container .content .row .box:nth-of-type(1),
+#About_Us .container .content .row .box:nth-of-type(3) {
+    transform: translateY(-100px);
+}
+
+#About_Us .container .content .row .box .item .images {
+    position: relative;
+    overflow: hidden;
+}
+
+#About_Us .container .content .row .box .item .images::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    z-index: 5;
+    width: 110px;
+    height: 200%;
+    transform: rotate(30deg);
+    background: linear-gradient(to right, transparent, rgb(255, 255, 255, 0.5));
+}
+
+#About_Us .container .content .row .box .item .images:hover::before {
+    left: 150%;
+    transition-duration: 1s;
+}
+
+#About_Us .container .content .row .box .item .images img:nth-of-type(1) {
+    max-width: 150px;
+    transition-duration: 0.5s;
+}
+
+#About_Us .container .content .row .box .item .images:hover img:nth-of-type(1) {
+    transform: rotateY(180deg);
+}
+
+#About_Us .container .content .row .box .item .images img:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#About_Us .container .content .row .box .item .caption h3 {
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+#About_Us .container .content .row .box .item .caption a {
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+/* ? _______________________________________________________ End_About_Us _______________________________________________________ */
+
+
+/* ? _______________________________________________________ Start_Our_Story _______________________________________________________ */
+
+#Our_Story .container .row .part1 .item .content p:nth-of-type(1) {
+    color: #fff;
+    width: 80%;
+    margin-inline: auto;
+}
+
+#Our_Story .container .row .part1 .item .content a {
+    font-size: 25px;
+}
+
+/* ------------------------------------------- */
+#Our_Story .container .row .part2 .item {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+#Our_Story .container .row .part2 .item .bg-img img {
+    max-width: 500px;
+}
+
+#Our_Story .container .row .part2 .item .s-badge {
+    position: absolute;
+    top: -60px;
+    right: -50px;
+}
+
+#Our_Story .container .row .part2 .item .s-badge img:nth-of-type(1) {
+    animation: rotation 5s linear infinite;
+}
+
+#Our_Story .container .row .part2 .item .s-badge img:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Our_Story .container .row .part2 .item .decorative-image {
+    position: absolute;
+    width: 250px;
+    bottom: -60px;
+    left: -50px;
+}
+
+#Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(1) {
+    max-width: 110px;
+}
+
+#Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(2) {
+    max-width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ? _______________________________________________________ End_Our_Story _______________________________________________________ */
+
+
+
+/* ? _______________________________________________________ Start_Special_Dish _______________________________________________________ */
+
+#Special_Dish .row1 .part1 {
+    /* fallback */
+    height: 100vh;
+    height: 100dvh;
+
+    background: url('../images/special-dish.jpg') no-repeat center / cover;
+}
+
+/* ------------------------------------ */
+
+#Special_Dish .row1 .part2 .item {
+    width: 70%;
+    margin: auto;
+}
+
+#Special_Dish .row1 .part2 .item .s-badge {
+    animation: down-up 2s linear infinite alternate;
+}
+
+#Special_Dish .row1 .part2 .item .content .caption p {
+    width: 88%;
+}
+
+/* ? _______________________________________________________ End_Special_Dish _______________________________________________________ */
+
+
+/* ? _______________________________________________________ Start_Menu _______________________________________________________ */
+
+#Menu {
+    position: relative;
+}
+
+#Menu .bg-imgs img {
+    position: absolute;
+    animation: down-up 2s linear infinite alternate;
+}
+
+#Menu .bg-imgs img:nth-of-type(1) {
+    top: 0;
+    left: 0;
+}
+
+#Menu .bg-imgs img:nth-of-type(2) {
+    bottom: 0;
+    right: 0;
+}
+
+#Menu .container {
+    position: relative;
+    z-index: 50;
+}
+
+#Menu .container .content .menu-categories {
+    border: 1px solid #9C9C9C;
+    border-left: 0;
+    border-right: 0;
+
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+/* fallback for scrollbar-width */
+#Menu .container .content .menu-categories::-webkit-scrollbar {
+    width: 0;
+}
+
+#Menu .container .content .menu-categories ul {
+    width: max-content;
+    min-width: 100%;
+}
+
+#Menu .container .content .menu-categories .category {
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+#Menu .container .content .menu-categories .category.active {
+    color: var(--main-color);
+}
+
+#Menu .container .content .menu-content .menu-meals {
+    display: none;
+}
+
+#Menu .container .content .menu-content .menu-meals.active {
+    display: block;
+}
+
+#Menu .container .content .menu-content .menu-meals .row .part1 {
+    border-right: 1px solid #9C9C9C;
+}
+
+/* -------------- show -------------------- */
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal {
+    opacity: 0;
+    transform: translate(-40px, -30px);
+    transition-duration: 0.8s;
+}
+
+#Menu .container .content .menu-content .menu-meals.show .row [class*='part'] .item .meal {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+/* ---------------------------------- */
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .image img {
+    transform: scale(1.6);
+    transition: 0.4s;
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal:hover .image img {
+    transform: scale(1.8);
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .image .layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color-alpha);
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal:hover .image .layout {
+    opacity: 1;
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .image .layout i {
+    transform: rotate(0deg) scale(0);
+    cursor: pointer;
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal:hover .image .layout i {
+    transform: rotate(180deg) scale(1);
+    transition: 0.4s;
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .description .meal-name,
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .description .meal-price {
+    white-space: nowrap;
+}
+
+#Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .description .separator {
+    width: 100%;
+    height: 4px;
+    border: 1px solid #9C9C9C;
+    border-left: 0;
+    border-right: 0;
+}
+
+/* ? _______________________________________________________ End_Menu _______________________________________________________ */
+
+
+/* ? _______________________________________________________ Start_Our_Chefs _______________________________________________________ */
+
+#Our_Chefs .container .content .row .chef .item {
+    max-width: 350px;
+    margin: auto;
+}
+
+#Our_Chefs .container .content .row .chef .item .name {
+    margin-bottom: 5px;
+}
+
+#Our_Chefs .container .content .row .chef .item .role {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+#Our_Chefs .container .content .row .chef .item .description {
+    font-size: 14px;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo img {
+    transition: 0.8s;
+}
+
+#Our_Chefs .container .content .row .chef .item:hover .photo img {
+    transform: rotate(2deg) scale(1.06);
+    opacity: 0.5;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#Our_Chefs .container .content .row .chef .item .photo .layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, 0.2);
+
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#Our_Chefs .container .content .row .chef .item:hover .photo .layout::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials {
+    position: relative;
+    z-index: 5;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li {
+    width: 35px;
+    height: 35px;
+
+    background-color: #000;
+
+    opacity: 0;
+    transition: background-color 0.5s, opacity 0.3s 0.1s;
+}
+
+#Our_Chefs .container .content .row .chef .item:hover .photo .layout .socials li {
+    transition: background-color 0.5s, opacity 0.3s 0.3s;
+    opacity: 1;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(1):hover,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(4):hover {
+    background-color: #1877F2;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2):hover {
+    background-color: #fff;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3):hover {
+    background-color: #DD3E5C;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li a {
+    transition: 0.5s;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(1) a,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(4) a {
+    color: #1877F2;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(1):hover a,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3):hover a,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(4):hover a,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2) a {
+    color: #fff;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2):hover a {
+    color: #000;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3) a {
+    color: #DD3E5C;
+}
+
+/* ? _______________________________________________________ End_Our_Chefs _______________________________________________________ */
+
+
+/* ? _______________________________________________________ Start_Contact_Us _______________________________________________________ */
+#Contact_Us {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/contact-bg.jpg') no-repeat center / cover;
+
+    padding-block: 80px 60px;
+}
+
+#Contact_Us .container .wrapper-form {
+    background: url('../images/bg.png') #171819;
+    padding-inline: 40px;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#Contact_Us .container .wrapper-form>img {
+    position: absolute;
+    top: 0;
+    width: 15px;
+}
+
+#Contact_Us .container .wrapper-form>img:nth-of-type(1) {
+    left: 0;
+}
+
+#Contact_Us .container .wrapper-form>img:nth-of-type(2) {
+    right: 0;
+}
+
+/* ? _______________________________________________________ End_Contact_Us _______________________________________________________ */
+
+
+
+/* ? _______________________________________________________ Landing_Page _______________________________________________________ */
+.landing-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+
+    transition-duration: 0.5s;
+}
+
+.landing-page.hide {
+    opacity: 0;
+}
+
+.landing-page .box .snipper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.landing-page .box .snipper::before,
+.landing-page .box .snipper::after {
+    content: '';
+    position: absolute;
+}
+
+.landing-page .box .snipper::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 50px solid transparent;
+    border-left: 50px solid #000;
+
+    animation: rotation 1s linear infinite;
+}
+
+.landing-page .box .snipper::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    height: 92%;
+    border-radius: 50%;
+    background: var(--main-color);
+}
+
+.landing-page .box .word {
+    position: relative;
+}
+
+.landing-page .box .word p {
+    font-weight: 500;
+}
+
+.landing-page .box .word p:nth-of-type(1) {
+    -webkit-text-stroke: #000 1px;
+    color: transparent;
+}
+
+.landing-page .box .word p:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    white-space: nowrap;
+}
+
+.landing-page .box .word p:nth-of-type(2) span {
+    display: inline-block;
+
+    transform: rotateY(90deg);
+    opacity: 0;
+    animation: rotate-letter 3s ease-in-out infinite;
+}
+
+.landing-page .box .word p:nth-of-type(2) span:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+.landing-page .box .word p:nth-of-type(2) span:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+.landing-page .box .word p:nth-of-type(2) span:nth-of-type(4) {
+    animation-delay: 0.6s;
+}
+
+.landing-page .box .word p:nth-of-type(2) span:nth-of-type(5) {
+    animation-delay: 0.8s;
+}
+
+.landing-page .box .word p:nth-of-type(2) span:nth-of-type(6) {
+    animation-delay: 1s;
+}
+
+/* ? _______________________________________________________ Progress_Bar _______________________________________________________ */
+.special-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 6px;
+    overflow: hidden;
+}
+
+.special-progress .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--main-color);
+}
+
+
+/* ? _______________________________________________________ Popup _______________________________________________________ */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+    overflow: auto;
+    scrollbar-width: none;
+    display: none;
+}
+
+/* fallback  for (scrollbar-width)*/
+.popup::-webkit-scrollbar {
+    width: 0;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup.show {
+    background-color: var(--main-color-alpha);
+}
+
+/* --------------------------------------- */
+.popup .container>.box {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 40px;
+    position: relative;
+
+    transform: translateY(-150%);
+    opacity: 0;
+
+    transition-duration: 0.8s;
+}
+
+.popup.show .container>.box {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.popup .box .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.popup .box .close i {
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.popup .box .close i:hover {
+    color: var(--main-color);
+}
+
+/* ________________________ Booking ________________________ */
+
+.popup[data-popup-name="bookingTable"] .container .box .content form .box input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(50%)
+}
+
+/* ________________________ Sidebar ________________________ */
+
+.popup[data-popup-name="sidebar"] .box {
+    max-width: 400px;
+    position: relative;
+    color: #fff;
+
+    transform: translateX(-150%);
+    transition-duration: 0.8s;
+}
+
+.popup[data-popup-name="sidebar"].show .box {
+    transform: translateX(0%);
+}
+
+.popup[data-popup-name="sidebar"] .box .images img:nth-of-type(2) {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.popup[data-popup-name="sidebar"] .box .links ul {
+    max-width: 200px;
+    margin: auto;
+}
+
+.popup[data-popup-name="sidebar"] .box .links ul li {
+    border: 1px solid #fff;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0;
+}
+
+.popup[data-popup-name="sidebar"] .box .links ul a {
+    color: #fff;
+    transition-duration: 0.5s;
+}
+
+.popup[data-popup-name="sidebar"] .box .links ul a:hover,
+.popup[data-popup-name="sidebar"] .box .links ul a.active {
+    color: var(--main-color);
+}
+
+.popup[data-popup-name="sidebar"] .box .info .booking p {
+    letter-spacing: 1px;
+}
+
+.popup[data-popup-name="sidebar"] .box .info .booking a {
+    font-size: 30px;
+}
+
+
+/* ________________________ Meal ________________________ */
+
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel {
+    position: relative;
+}
+
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel .meal-price {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-right: 0;
+}
+
+
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel .prev,
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 5px;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel .prev i,
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel .next i {
+    transform: rotate(-45deg);
+}
+
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel .prev {
+    left: 20px;
+}
+
+.popup[data-popup-name="meal"] .container .box .content .meal-carousel .next {
+    right: 20px;
+}

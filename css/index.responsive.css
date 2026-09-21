@@ -1,0 +1,568 @@
+/*! __________________________________________ 350 __________________________________________  */
+@media (max-width: 1300px) {
+
+    /*? ______________________________________ Global ______________________________________  */
+    .main-button {
+        font-size: 12px;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+    }
+
+    form .box .form-control,
+    form .box .form-control::placeholder {
+        font-size: 14px;
+    }
+
+    /*? ______________________________________ Navbar ______________________________________ */
+    nav .logo img {
+        max-width: 120px;
+    }
+
+    /*? ______________________________________ Header ______________________________________ */
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .title h6 {
+        font-size: 14px;
+    }
+
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .content h2 {
+        font-size: 30px;
+    }
+
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .content p {
+        font-size: 12px;
+    }
+
+    /** -------------------------------------------- */
+
+    header .special-carousel .special-indicators {
+        right: 30px;
+        bottom: 30px;
+    }
+
+    /** -------------------------------------------- */
+
+    header .special-carousel .popup-booking-opener {
+        width: 80px;
+        height: 80px;
+        left: 30px;
+        bottom: 30px;
+    }
+
+    header .special-carousel .popup-booking-opener img {
+        max-width: 30px;
+        margin-bottom: 5px;
+    }
+
+    header .special-carousel .popup-booking-opener p {
+        font-size: 10px;
+    }
+
+    /* ? ______________________________________ About_Us ______________________________________ */
+    #About_Us .container .intro {
+        width: 85%;
+        margin-bottom: 3rem;
+    }
+
+    #About_Us .container .content .row .box:nth-of-type(1),
+    #About_Us .container .content .row .box:nth-of-type(3) {
+        transform: translateY(0px);
+    }
+
+    #About_Us .container .content .row .box .item {
+        max-width: 280px;
+        margin: auto;
+    }
+
+    #About_Us .container .content .row .box .item .caption h3 {
+        font-size: 25px;
+    }
+
+    #About_Us .container .content .row .box .item .caption a {
+        font-size: 14px;
+    }
+
+    /* ? ______________________________________ Our_Story ______________________________________ */
+
+    #Our_Story .container .row .part1 .item .content p:nth-of-type(1) {
+        width: 85%;
+        font-size: 14px;
+    }
+
+    #Our_Story .container .row .part1 .item .content a {
+        font-size: 22px;
+    }
+
+    /* ------------------------------------------- */
+    #Our_Story .container .row .part2 .item .bg-img img {
+        max-width: 280px;
+    }
+
+    #Our_Story .container .row .part2 .item .s-badge {
+        top: -30px;
+        right: -20px;
+    }
+
+    #Our_Story .container .row .part2 .item .s-badge img {
+        max-width: 100px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image {
+        width: 150px;
+        bottom: -40px;
+        left: -15px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(1) {
+        max-width: 65px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(2) {
+        max-width: 150px;
+    }
+
+    /*? ______________________________________ Special_Dish ______________________________________ */
+    #Special_Dish .row1 .part2 .item {
+        width: 95%;
+    }
+
+    #Special_Dish .row1 .part2 .item .content .caption p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    /*? ______________________________________ Contact_Us ______________________________________ */
+
+    #Contact_Us .container .wrapper-form {
+        max-width: 300px;
+    }
+
+    #Contact_Us .container .wrapper-form .contact-form .info p {
+        font-size: 13px;
+    }
+
+    #Contact_Us .container .footer p {
+        font-size: 14px;
+    }
+
+    /*? ______________________________________ Our_Chefs ______________________________________ */
+    #Our_Chefs .container .content .row .chef .item {
+        max-width: 280px;
+    }
+
+    /*? ______________________________________ Menu ______________________________________ */
+    #Menu .container .content .menu-content .menu-meals .row .part1 {
+        border-right: 0;
+    }
+
+    #Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .image {
+        width: 90px;
+        height: 90px;
+    }
+
+    /*? ______________________________________ Booking_Popup ______________________________________ */
+    .popup .container>.box {
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 30px 20px;
+    }
+
+    .popup[data-popup-name="bookingTable"] .container .box .content p a {
+        display: block;
+    }
+
+    /*? ______________________________________ Sidebar_Popup ______________________________________ */
+
+    .popup[data-popup-name="sidebar"] .box {
+        max-width: 280px;
+    }
+
+    .popup[data-popup-name="sidebar"] .box .images img:nth-of-type(1),
+    .popup[data-popup-name="sidebar"] .box .images img:nth-of-type(2) {
+        max-width: 130px;
+    }
+
+    .popup[data-popup-name="sidebar"] .box .info .visit-us p {
+        font-size: 14px;
+    }
+
+    .popup[data-popup-name="sidebar"] .box .info .booking a {
+        font-size: 22px;
+    }
+
+    /*? ______________________________________ Meal_Popup ______________________________________ */
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .meal-price {
+        top: 10px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .meal-price h5 {
+        font-size: 16px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .prev,
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .next {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .prev {
+        left: 15px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .next {
+        right: 15px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-description {
+        font-size: 15px;
+    }
+
+}
+
+/*! __________________________________________ 450 __________________________________________  */
+@media (min-width: 371px) and (max-width: 1300px) {
+
+    /*? ______________________________________ Global ______________________________________  */
+    .main-button {
+        font-size: 13px;
+    }
+
+    /*? ______________________________________ Header ______________________________________ */
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .title h6 {
+        font-size: 16px;
+    }
+
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .content h2 {
+        font-size: 40px;
+    }
+
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .content p {
+        font-size: 14px;
+    }
+
+    /* ? ______________________________________ About_Us ______________________________________ */
+
+    #About_Us .container .content .row .box .item {
+        max-width: 300px;
+    }
+
+    /* ? ______________________________________ Our_Story ______________________________________ */
+
+    #Our_Story .container .row .part2 .item .decorative-image {
+        width: 170px;
+        bottom: -40px;
+        left: -30px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(1) {
+        max-width: 70px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(2) {
+        max-width: 170px;
+    }
+
+    /*? ______________________________________ Special_Dish ______________________________________ */
+    #Special_Dish .row1 .part2 .item {
+        width: 90%;
+    }
+
+    #Special_Dish .row1 .part2 .item .content .caption p {
+        width: 90%;
+    }
+
+    /*? ______________________________________ Our_Chefs ______________________________________ */
+    #Our_Chefs .container .content .row .chef .item {
+        max-width: 300px;
+    }
+
+    /*? ______________________________________ Contact_Us ______________________________________ */
+    #Contact_Us .container .wrapper-form {
+        max-width: 350px;
+    }
+
+    #Contact_Us .container .wrapper-form .contact-form .info p {
+        font-size: 14px;
+    }
+
+    /*? ______________________________________ Menu ______________________________________ */
+
+    #Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .image {
+        width: 100px;
+        height: 100px;
+    }
+
+    #Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .description .meal-name,
+    #Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .description .meal-price {
+        font-size: 16px;
+    }
+
+    #Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .description p {
+        font-size: 14px;
+    }
+
+    /*? ______________________________________ Booking_Popup ______________________________________ */
+    .popup .container>.box {
+        max-width: 350px;
+    }
+
+    /*? ______________________________________ Sidebar_Popup ______________________________________ */
+    .popup[data-popup-name="sidebar"] .box {
+        max-width: 350px;
+    }
+}
+
+/*! __________________________________________ 650 __________________________________________  */
+@media (min-width: 577px) and (max-width: 1300px) {
+
+    /*? ______________________________________ Global ______________________________________  */
+    .main-button {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    form .box .form-control,
+    form .box .form-control::placeholder {
+        font-size: 16px;
+    }
+
+    /*? ______________________________________ Navbar ______________________________________ */
+    nav .logo img {
+        max-width: 130px;
+    }
+
+    /*? ______________________________________ Header ______________________________________ */
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .content h2 {
+        font-size: 50px;
+    }
+
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .content p {
+        font-size: 16px;
+    }
+
+    /*? ______________________________________ Special_Dish ______________________________________ */
+    #Special_Dish .row1 .part2 .item {
+        width: 85%;
+    }
+
+    /*? ______________________________________ Contact_Us ______________________________________ */
+    #Contact_Us .container .wrapper-form {
+        max-width: 400px;
+    }
+
+    #Contact_Us .container .wrapper-form .contact-form .info p {
+        font-size: 16px;
+    }
+
+    #Contact_Us .container .footer p {
+        font-size: 16px;
+    }
+
+    /*? ______________________________________ Booking_Popup ______________________________________ */
+    .popup .container>.box {
+        max-width: 450px;
+        margin: 30px auto;
+        padding: 30px;
+    }
+
+    /*? ______________________________________ Sidebar_Popup ______________________________________ */
+    .popup[data-popup-name="sidebar"] .box {
+        max-width: 400px;
+    }
+
+    .popup[data-popup-name="sidebar"] .box .images img:nth-of-type(1),
+    .popup[data-popup-name="sidebar"] .box .images img:nth-of-type(2) {
+        max-width: 150px;
+    }
+
+    .popup[data-popup-name="sidebar"] .box .info .visit-us p {
+        font-size: 16px;
+    }
+
+    .popup[data-popup-name="sidebar"] .box .info .booking a {
+        font-size: 30px;
+    }
+
+    /*? ______________________________________ Meal_Popup ______________________________________ */
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .meal-price {
+        top: 20px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .meal-price h5 {
+        font-size: 20px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .prev,
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .next {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .prev {
+        left: 20px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-carousel .next {
+        right: 20px;
+    }
+
+    .popup[data-popup-name="meal"] .container .box .content .meal-description {
+        font-size: 16px;
+    }
+}
+
+/*! __________________________________________ 850 __________________________________________  */
+@media (min-width: 769px) and (max-width: 1300px) {
+
+    /*? ______________________________________ Navbar ______________________________________ */
+    nav .logo img {
+        max-width: 140px;
+    }
+
+    /*? ______________________________________ Header ______________________________________ */
+    header .special-carousel .special-carousel-inner .special-carousel-item .container .content h2 {
+        font-size: 70px;
+    }
+
+    /* ? ______________________________________ Our_Story ______________________________________ */
+
+    #Our_Story .container .row .part1 .item .content p:nth-of-type(1) {
+        width: 90%;
+    }
+
+    #Our_Story .container .row .part1 .item .content a {
+        font-size: 22px;
+    }
+
+    /*? ______________________________________ Special_Dish ______________________________________ */
+    #Special_Dish .row1 .part2 .item {
+        width: 90%;
+    }
+
+    #Special_Dish .row1 .part2 .item .content .caption p {
+        width: 100%;
+    }
+
+    /*? ______________________________________ Our_Chefs ______________________________________ */
+    #Our_Chefs .container .content .row .chef .item .name {
+        font-size: 20px;
+    }
+
+    #Our_Chefs .container .content .row .chef .item .role,
+    #Our_Chefs .container .content .row .chef .item .description {
+        font-size: 12px;
+    }
+
+    /*? ______________________________________ Contact_Us ______________________________________ */
+    #Contact_Us .container .wrapper-form {
+        max-width: 450px;
+    }
+
+    /*? ______________________________________ Menu ______________________________________ */
+    #Menu .container .content .menu-content .menu-meals .row .part1 {
+        border-right: 1px solid #9C9C9C;
+    }
+
+    /*? ______________________________________ Booking_Popup ______________________________________ */
+    .popup .container>.box {
+        max-width: 550px;
+    }
+
+    .popup[data-popup-name="bookingTable"] .container .box .content p a {
+        display: inline-block;
+    }
+
+}
+
+/*! __________________________________________ 1050 __________________________________________  */
+@media (min-width: 992px) and (max-width: 1300px) {
+
+    /*? ______________________________________ Navbar ______________________________________ */
+    nav .logo img {
+        max-width: 150px;
+    }
+
+    /*? ______________________________________ Header ______________________________________ */
+    header .special-carousel .special-indicators {
+        right: 40px;
+        bottom: 40px;
+    }
+
+    /** -------------------------------------------- */
+
+    header .special-carousel .popup-booking-opener {
+        left: 40px;
+        bottom: 40px;
+    }
+
+    /* ? ______________________________________ About_Us ______________________________________ */
+    #About_Us .container .intro {
+        width: 40%;
+    }
+
+    #About_Us .container .content .row .box:nth-of-type(1),
+    #About_Us .container .content .row .box:nth-of-type(3) {
+        transform: translateY(-100px);
+    }
+
+    #About_Us .container .content .row .box .item {
+        max-width: initial;
+    }
+
+    /* ? ______________________________________ Our_Story ______________________________________ */
+
+    #Our_Story .container .row .part1 .item .content p:nth-of-type(1) {
+        width: 100%;
+    }
+
+    #Our_Story .container .row .part2 .item .bg-img img {
+        max-width: 360px;
+    }
+
+    #Our_Story .container .row .part2 .item .s-badge {
+        top: -40px;
+        right: -30px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image {
+        width: 220px;
+        bottom: -40px;
+        left: -40px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(1) {
+        max-width: 90px;
+    }
+
+    #Our_Story .container .row .part2 .item .decorative-image img:nth-of-type(2) {
+        max-width: 220px;
+    }
+
+    /*? ______________________________________ Special_Dish ______________________________________ */
+    #Special_Dish .row1 .part2 .item .content .caption p {
+        font-size: 16px;
+        width: 85%;
+    }
+
+    /*? ______________________________________ Our_Chefs ______________________________________ */
+    #Our_Chefs .container .content .row .chef .item .name {
+        font-size: 25px;
+    }
+
+    #Our_Chefs .container .content .row .chef .item .description {
+        font-size: 14px;
+    }
+
+    /*? ______________________________________ Menu ______________________________________ */
+    #Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal .image {
+        width: 80px;
+        height: 80px;
+    }
+
+    /*? ______________________________________ Contact_Us ______________________________________ */
+    #Contact_Us .container .wrapper-form {
+        max-width: 500px;
+    }
+}
