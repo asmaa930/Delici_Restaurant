@@ -993,7 +993,7 @@ header .special-carousel .popup-booking-opener p {
 }
 
 .popup[data-popup-name="meal"] .container .box .content .meal-image {
-    height: 310px;
+    max-height: 310px;
     overflow: hidden;
 }
 
