@@ -26,7 +26,10 @@ let carousel = document.querySelector('.special-carousel'),
     // Menu
     menuSection = document.getElementById('Menu'),
     menuContentWrapper = menuSection.querySelector('.menu-content'),
-    AllCategories = [BreakFast, Lunch, Dinner, Drinks];
+    AllCategories = [BreakFast, Lunch, Dinner, Drinks],
+
+    popupBtnPrevMeal,
+    popupBtnNextMeal;
 
 
 checkNavOnScroll();
@@ -95,19 +98,6 @@ if (carousel.classList.contains('auto-play')) {
 }
 //landingPageDuration = 3000 >> is time  to remove landing-page
 
-//! __________________________________________ Keyboard_Control __________________________________________
-
-document.addEventListener('keyup', function (e) {
-    if (e.key == 'ArrowRight') {
-        btnNextCarousel.click();
-
-    } else if (e.key == 'ArrowLeft') {
-        btnPrevCarousel.click();
-
-    } else if (e.key == 'Escape' && document.querySelector('.popup.active')) {
-        closePopup();
-    }
-});
 
 //! __________________________________________ stopPropagation __________________________________________
 
@@ -146,6 +136,17 @@ document.addEventListener('scroll', function () {
 
     progressBar.style.width = `${width}%`;
 
+
+    //! ___________ View_Carousel ___________
+
+    if (window.scrollY >= carousel.offsetHeight) {
+        carousel.classList.remove('viewed');
+
+    } else {
+        carousel.classList.add('viewed');
+
+    }
+
 });
 
 
@@ -161,6 +162,33 @@ links.forEach(function (link) {
 
         window.scrollTo(0, targetSectionOffsetTop);
     });
+});
+
+
+
+//! __________________________________________ Keyboard_Control __________________________________________
+
+document.addEventListener('keyup', function (e) {
+
+    //* Works only when carousel is viewed
+    if (e.key == 'ArrowRight' && carousel.classList.contains('viewed')) {
+        btnNextCarousel.click();
+
+    } else if (e.key == 'ArrowLeft' && carousel.classList.contains('viewed')) {
+        btnPrevCarousel.click();
+
+        //* Works only when meal popup is active
+    } else if (e.key == 'ArrowRight' && document.querySelector('.popup[data-popup-name="meal"].active')) {
+        popupBtnNextMeal.click();
+
+    } else if (e.key == 'ArrowLeft' && document.querySelector('.popup[data-popup-name="meal"].active')) {
+        popupBtnPrevMeal.click();
+
+
+        //* Works only when popup is active
+    } else if (e.key == 'Escape' && document.querySelector('.popup.active')) {
+        closePopup();
+    }
 });
 
 //! __________________________________________ Menu __________________________________________
@@ -193,3 +221,5 @@ AllCategories.forEach(function (category) {
         `;
     }
 });
+
+

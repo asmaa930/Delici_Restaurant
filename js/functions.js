@@ -213,8 +213,8 @@ function showPopupMeal(mealId) {
             <div class="meal-carousel" data-meal-id="${meal.id}">
 
                 <!--* ---------- Image_Meal ---------- -->
-                <div class="meal-image">
-                    <img src="images/${meal.images[0]}" class="img-fluid rounded-3 " alt="${meal.name}">
+                <div class="meal-image center rounded-3">
+                    <img src="images/${meal.images[0]}" class="img-fluid  " alt="${meal.name}">
                 </div>
                 <!--* ---------- Price ---------- -->
                 <div class="meal-price px-2 py-1 px-sm-3 py-sm-2 rounded-start">
@@ -230,6 +230,10 @@ function showPopupMeal(mealId) {
             </div>
         </div>
     `;
+
+
+    popupBtnPrevMeal = document.querySelector('.popup[data-popup-name="meal"] .box .prev');
+    popupBtnNextMeal = document.querySelector('.popup[data-popup-name="meal"] .box .next');
 
     openPopup('meal');
 }
@@ -283,3 +287,6 @@ function switchMeal(that) {
 
     updateMealData(targetMeal);
 }
+
+
+

@@ -213,10 +213,6 @@
         right: 15px;
     }
 
-    .popup[data-popup-name="meal"] .container .box .content .meal-description {
-        font-size: 15px;
-    }
-
 }
 
 /*! __________________________________________ 450 __________________________________________  */
@@ -406,10 +402,6 @@
 
     .popup[data-popup-name="meal"] .container .box .content .meal-carousel .next {
         right: 20px;
-    }
-
-    .popup[data-popup-name="meal"] .container .box .content .meal-description {
-        font-size: 16px;
     }
 }
 

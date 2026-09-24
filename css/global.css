@@ -18,6 +18,10 @@ html::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
+html::-webkit-scrollbar-track {
+    background: #2C2C2C;
+}
+
 body {
     font-family: "DM Sans", sans-serif;
     height: 3000px;
@@ -180,7 +184,7 @@ form .box .form-control {
     margin-bottom: 25px;
     padding: 8px 15px;
     box-shadow: none;
-    background: transparent;
+    background-color: transparent;
     border-color: #9C9C9C;
 }
 

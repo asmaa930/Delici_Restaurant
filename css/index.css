@@ -87,7 +87,7 @@ header .special-carousel .special-carousel-inner .special-carousel-item {
 
     opacity: 0;
     transform: scale(1.3);
-    
+
     transition-duration: 0.5s;
 }
 
@@ -202,7 +202,6 @@ header .special-carousel .special-indicators li.active {
 }
 
 header .special-carousel.auto-play .special-indicators li.active {
-    background: #fff;
     width: 60px;
     border-radius: 5px;
 }
@@ -212,7 +211,7 @@ header .special-carousel.auto-play .special-indicators li.active .progress-bar {
     top: 0;
     left: 0;
     height: 100%;
-    background: var(--main-color);
+    background: #fff;
 }
 
 /** -------------------------------------------- */
@@ -707,6 +706,10 @@ header .special-carousel .popup-booking-opener p {
         url('../images/contact-bg.jpg') no-repeat center / cover;
 
     padding-block: 80px 60px;
+
+    /* fallback */
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 #Contact_Us .container .wrapper-form {
@@ -870,6 +873,8 @@ header .special-carousel .popup-booking-opener p {
     z-index: 200;
     width: 100%;
     height: 100%;
+    background-color: var(--main-color-alpha);
+    opacity: 0;
     transition: 0.8s;
     overflow: auto;
     scrollbar-width: none;
@@ -886,7 +891,7 @@ header .special-carousel .popup-booking-opener p {
 }
 
 .popup.show {
-    background-color: var(--main-color-alpha);
+    opacity: 1;
 }
 
 /* --------------------------------------- */
@@ -897,7 +902,6 @@ header .special-carousel .popup-booking-opener p {
     position: relative;
 
     transform: translateY(-150%);
-    opacity: 0;
 
     transition-duration: 0.8s;
 }
@@ -932,6 +936,9 @@ header .special-carousel .popup-booking-opener p {
 
 .popup[data-popup-name="sidebar"] .box {
     max-width: 400px;
+    /* fallback */
+    min-height: 100vh;
+    min-height: 100dvh;
     position: relative;
     color: #fff;
 
@@ -983,6 +990,11 @@ header .special-carousel .popup-booking-opener p {
 
 .popup[data-popup-name="meal"] .container .box .content .meal-carousel {
     position: relative;
+}
+
+.popup[data-popup-name="meal"] .container .box .content .meal-image {
+    height: 310px;
+    overflow: hidden;
 }
 
 .popup[data-popup-name="meal"] .container .box .content .meal-carousel .meal-price {
