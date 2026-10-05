@@ -1,0 +1,239 @@
+:root {
+    --main-color: #E3C590;
+    --main-color-alpha: rgba(227, 196, 144, 0.6);
+    --bg-color1: #171819;
+    --bg-color2: #0E0D0C;
+    --bg-color-nav: #202020;
+    --bg-color-scrollbar: #2C2C2C;
+    --gray-color: #9C9C9C;
+}
+
+::selection {
+    background: var(--main-color);
+    color: #000;
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--bg-color-scrollbar);
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Forum", serif;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.s-text-color {
+    color: var(--gray-color);
+}
+
+/* ---------------------------------------- */
+
+.main-button {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 12px 38px;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+.main-button:hover,
+.btn.main-button:active {
+    border: 2px solid var(--main-color);
+}
+
+.main-button::before,
+.main-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--main-color);
+    transition-duration: 0.5s;
+}
+
+.main-button::before {
+    top: 0;
+}
+
+.main-button::after {
+    bottom: 0;
+}
+
+.main-button:hover::before,
+.main-button:hover::after {
+    height: 52%;
+}
+
+.main-button span.text {
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.5s;
+}
+
+.main-button:hover span.text {
+    color: #000;
+}
+
+/* ---------------------------------------- */
+
+.underlined {
+    position: relative;
+}
+
+.underlined::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 4px;
+
+    border: 1px solid var(--main-color);
+    border-left: 0;
+    border-right: 0;
+
+    transition-duration: 0.5s;
+}
+
+.underlined::after {
+    bottom: -6px;
+}
+
+.underlined:hover:after,
+.underlined.active:after {
+    width: 100%;
+}
+
+/* ---------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+
+.square span {
+    display: inline-block;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--main-color);
+    animation: rotation 5s linear infinite;
+}
+
+/* ---------------------------------------- */
+
+.title h6 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+
+.popup[data-popup-name="sidebar"] .box,
+#About_Us,
+#Special_Dish,
+#Our_Chefs {
+    background: var(--bg-color2) url('../images/bg.png');
+}
+
+.popup .container>.box,
+#Our_Story,
+#Menu {
+    background-color: var(--bg-color1);
+}
+
+section {
+    overflow: hidden;
+}
+
+.special-py {
+    padding-block: 6.25rem;
+}
+
+/* ------------------------------------- */
+
+form {
+    position: relative;
+}
+
+form .reset {
+    position: absolute;
+    right: 0;
+    top: -35px;
+    cursor: pointer;
+}
+
+form .reset i {
+    cursor: pointer;
+}
+
+form .box:not(:last-child) {
+    margin-bottom: 40px;
+    row-gap: 40px;
+}
+
+form .box .form-control {
+    padding: 8px 15px;
+    box-shadow: none;
+    background-color: transparent;
+    border-color: var(--gray-color);
+}
+
+form .box .form-control,
+form .box .form-control::placeholder {
+    color: var(--gray-color);
+}
+
+form .box .form-control:focus {
+    border-color: #fff;
+}
+
+form .box textarea {
+    resize: none;
+}
+
+form .box .alert-msg {
+    font-size: 14px;
+}
+
+/* ------------------------------------- */
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--main-color);
+    --bs-tooltip-color: #000;
+    font-weight: 500;
+}
