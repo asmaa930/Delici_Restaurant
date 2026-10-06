@@ -20,6 +20,7 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-thumb {
     background: var(--main-color);
     border-radius: 10px;
+    cursor: grab;
 }
 
 html::-webkit-scrollbar-track {

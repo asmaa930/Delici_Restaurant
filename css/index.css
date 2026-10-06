@@ -209,7 +209,8 @@ header .special-carousel .special-indicators li.active {
 }
 
 header .special-carousel.auto-play .special-indicators li.active {
-    width: 60px;
+    transition: width 0.2s;
+    width: 70px;
     border-radius: 5px;
 }
 
@@ -604,7 +605,7 @@ header .special-carousel .popup-booking-opener p {
 }
 
 #Menu .container .content .menu-content .menu-meals .row [class*='part'] .item .meal:hover .frame .layout i {
-    transition: 0.5s ;
+    transition: 0.5s;
     transform: rotate(180deg) scale(1);
 }
 
@@ -704,11 +705,6 @@ header .special-carousel .popup-booking-opener p {
 }
 
 #Our_Chefs .container .content .row .chef .item .photo .layout .socials li {
-    width: 35px;
-    height: 35px;
-
-    background-color: #000;
-
     opacity: 0;
     transition: background-color 0.5s, opacity 0.5s;
 }
@@ -718,20 +714,11 @@ header .special-carousel .popup-booking-opener p {
     opacity: 1;
 }
 
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(1):hover,
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(4):hover {
-    background-color: #1877F2;
-}
-
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2):hover {
-    background-color: #fff;
-}
-
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3):hover {
-    background-color: #DD3E5C;
-}
-
 #Our_Chefs .container .content .row .chef .item .photo .layout .socials li a {
+    width: 35px;
+    height: 35px;
+
+    background-color: #000;
     transition: 0.5s;
 }
 
@@ -740,22 +727,33 @@ header .special-carousel .popup-booking-opener p {
     color: #1877F2;
 }
 
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(1):hover a,
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3):hover a,
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(4):hover a,
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2) a {
-    color: #fff;
-}
-
-#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2):hover a {
-    color: #000;
-}
-
 #Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3) a {
     color: #DD3E5C;
 }
 
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2) a,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(1) a:hover,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3) a:hover,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(4) a:hover {
+    color: #fff;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(1) a:hover,
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(4) a:hover {
+    background-color: #1877F2;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(2) a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#Our_Chefs .container .content .row .chef .item .photo .layout .socials li:nth-of-type(3) a:hover {
+    background-color: #DD3E5C;
+}
+
 /* ? _______________________________________________________ End_Our_Chefs _______________________________________________________ */
+
 
 
 /* ? _______________________________________________________ Start_Contact_Us _______________________________________________________ */
