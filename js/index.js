@@ -222,7 +222,7 @@ document.addEventListener('keyup', function (e) {
 
 //! _______________________________________ Search _______________________________________
 
-searchInput.addEventListener("keyup", function () {
+searchInput.addEventListener("input", function () {
 
     if (this.value) {
         cancelSearchIcon.classList.remove('d-none');
